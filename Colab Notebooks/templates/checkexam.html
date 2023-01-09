@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+
+<html>  
+<head>  
+    <title>Exam</title> 
+
+</head>  
+<body> 
+
+  
+<h3>Exam details</h3>  
+<table border=5>  
+    <thead>  
+        <td>Q.Number</td>  
+        <td>Question</td>  
+        <td>Mark</td>  
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row[1]}}</td>  
+            <td>{{row[2]}}</td>  
+            <td>{{row[4]}}</td>  
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>  
+  
+  
+</body>  
+</html>  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Scorecard</title>  
+    <style>
+body {
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3411986-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-family: 'Courier New', monospace;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>  
+<body> 
+  <center> 
+  <br><br><br><br><br><br><br><br><br><br>
+<h2 style="color:white">Scorecard</h2> 
+<h4 style="color:white">Student Name : {{studname}} </h5>
+<h4 style="color:white">Roll No : {{rollno}} </h5>
+<h4 style="color:white">Semester : {{sem}} </h5>
+<table>  
+    <tr>  
+        <td style="color:white">ExamID</td>  
+        <td style="color:white">Mark</td>    
+    </tr>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td style="color:white">{{row["examid"]}}</td>  
+            <td style="color:white">{{row["studmark"]}}</td>    
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>  
+  
+  
+  
+</body>  
+</html>  

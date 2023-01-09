@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Marklist</title>  
+</head>  
+<body>   
+<table border=5>  
+    <thead>  
+        <td>RollNo</td>  
+        <td>Mark</td>  
+    </thead>  
+      
+    {% for row in l %}  
+      
+        <tr>  
+            <td>{{row["l[row]"]}}</td>  
+            <td>{{row["l[row]"]}}</td>  
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>  
+  
+<a href="/student">Go back to home page</a>  
+  
+</body>  
+</html>  

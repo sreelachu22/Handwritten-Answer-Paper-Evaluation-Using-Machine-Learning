@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Marklist</title>  
+    <style>
+      body {
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3411986-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-family: 'Courier New', monospace;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>  
+<body>  
+  <br><br><br><br><br><br><br><br><br><br>
+  <center>
+<h2 style="color:white">Marklist</h3>  
+<h4 style="color:white">Teacher Name : {{teachname}} </h5>
+<h4 style="color:white">Semester : {{sem}} </h5>
+<h4 style="color:white">Subject : {{sub}} </h5>
+<h4 style="color:white">Exam ID : {{examid}} </h5>
+<table>  
+    <tr>  
+        <td style="color:white">Roll No.</td>  
+        <td style="color:white">Mark</td>    
+    </tr>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td style="color:white">{{row["rollno"]}}</td>  
+            <td style="color:white">{{row["studmark"]}}</td>    
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>
+
+ 
+<br><br>     
+
+</body>  
+</html>  

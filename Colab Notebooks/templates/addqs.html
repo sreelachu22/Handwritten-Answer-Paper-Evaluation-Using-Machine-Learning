@@ -1,0 +1,19 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Add Question</title>  
+</head>  
+<body>  
+  
+<h3>Add Question</h3> 
+{% for row in n %}
+  <input type=text name={{row}} placeholder={{row}}>
+{% endfor %}
+<input type=submit name=submit value=AddQuestion>
+
+<br><br>  
+  
+<a href="/teacher">Go back to teacher page</a>  
+  
+</body>  
+</html>  

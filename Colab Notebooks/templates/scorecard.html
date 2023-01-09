@@ -1,0 +1,49 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>List</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("studhome.webp");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>  
+</head>  
+<body>  
+  <div class="bg">
+    <h3>Scorecard</h3> 
+    <table border=5>  
+      <thead>  
+          <td>Exam ID</td>  
+          <td>Mark</td>  
+      </thead>    
+      {% for row in rows %}  
+      
+          <tr>  
+              <td>{{row["examid"]}}</td>  
+              <td>{{row["studmark"]}}</td>   
+          </tr>  
+      
+      {% endfor %}
+      
+    </table>  
+    <br><br>    
+  
+<a href="/teacher">Go back to previous page</a>  
+  </div>
+</body>  
+</html>  

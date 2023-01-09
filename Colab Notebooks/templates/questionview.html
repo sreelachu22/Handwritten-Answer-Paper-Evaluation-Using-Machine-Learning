@@ -1,0 +1,78 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Exam</title>  
+
+ <style>
+   input[type=file] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+   .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body {
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3411986-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-family: 'Courier New', monospace;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>     
+</head>  
+<body>  
+  <center> 
+  <br><br><br><br><br><br><br><br><br><br>
+
+<h2 style="color:white">Exam</h3>  
+<br>
+<h4 style="color:white">Exam ID : {{examid}} </h5>
+<h4 style="color:white">Questions</h3>
+<table>  
+    <tr>  
+        <td style="color:white">Q No.</td>  
+        <td style="color:white">Question</td>  
+        <td style="color:white">Marks</td>  
+    </tr>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td style="color:white">{{row["qno"]}}</td>  
+            <td style="color:white">{{row["question"]}}</td>
+            <td style="color:white">{{row["maxmark"]}}</td>    
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>
+<form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit name=submit class="button" value=Upload>
+</form>
+ 
+<br><br>  
+
+  </body>  
+</html> 

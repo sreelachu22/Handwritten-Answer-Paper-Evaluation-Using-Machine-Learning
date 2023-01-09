@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Markdistribution</title>
+    <style>
+body {
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/03/08/Back-to-school-background-as-blank-copy-Graphics-3411986-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  font-family: 'Courier New', monospace;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+input[type=file] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>  
+</head>  
+<body>  
+  <center> 
+  <br><br><br><br><br><br><br><br><br><br>
+<h2 style="color:white">Markdistribution</h3>  
+<h4 style="color:white">Student Name : {{studname}} </h5>
+<h4 style="color:white">Exam ID : {{examid}} </h5>
+<h4 style="color:white">Total Mark : {{sum}} </h5>
+<table>  
+    <tr>  
+        <td style="color:white">Question No.</td>  
+        <td style="color:white">Answer</td>
+        <td style="color:white">Mark</td>    
+    </tr>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td style="color:white">{{row["qno"]}}</td>  
+            <td style="color:white">{{row["answer"]}}</td>
+            <td style="color:white">{{row["mark"]}}</td>    
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<br><br>
+  
+ 
+<br><br>  
+  
+</body>  
+</html>  
