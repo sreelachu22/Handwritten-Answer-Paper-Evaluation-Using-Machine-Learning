@@ -1,0 +1,9 @@
+leven
+mxnet
+gluonnlp
+protobuf
+sacremoses
+opencv-python
+Pillow
+pdf2image
+flask-ngrok
